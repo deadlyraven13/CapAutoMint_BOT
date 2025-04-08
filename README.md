@@ -26,8 +26,8 @@ Script Python untuk otomatisasi proses mint token testnet cUSD dari faucet contr
 ### 1. Clone Repository
 
 ```bash
-git clone https://github.com/deadlyraven13/capmint.git
-cd capmint
+git clone https://github.com/deadlyraven13/CapAutoMint_BOT.git
+cd CapAutoMint_BOT
 ```
 
 ### 2. Buat Virtual Environment (opsional tapi disarankan)
