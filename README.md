@@ -1,49 +1,93 @@
-# 💹 capmint – Auto Mint Testnet cUSD on MegaETH
+# 💹 capmint — Auto Mint Testnet cUSD with Web3.py
 
-Script otomatis untuk mint testnet cUSD ke wallet kamu di jaringan MegaETH menggunakan Python dan Web3.py.
+Script Python untuk otomatisasi proses mint token testnet cUSD dari faucet contract di jaringan MegaETH.
 
 ## 🚀 Fitur
 
-- Mint hingga 1000x cUSD langsung ke wallet
-- Delay acak antara setiap transaksi untuk menghindari spam detection
-- Menampilkan status transaksi (sukses/gagal)
-- Kode bersih dan mudah dimodifikasi
-- GUI (opsional) versi Tkinter/Streamlit coming soon
+- Mint token cUSD dalam jumlah besar (loop otomatis).
+- Delay acak antar transaksi.
+- Status transaksi (berhasil/gagal) ditampilkan real-time.
+- GUI (opsional) bisa ditambahkan untuk tampilan saldo.
 
-## 🛆 Requirements
+---
 
-- Python 3.8+
-- Web3.py
-- dotenv
+## 🧰 Requirement
 
-Install dependensi:
+- Python 3.10+
+- Git
+- Virtualenv (opsional tapi direkomendasikan)
+
+---
+
+## ⚖️ Instalasi
+
+### 1. Clone Repository
+
+```bash
+git clone https://github.com/deadlyraven13/capmint.git
+cd capmint
+```
+
+### 2. Buat Virtual Environment (opsional tapi disarankan)
+
+```bash
+python -m venv venv
+source venv/bin/activate      # Linux/macOS
+venv\Scripts\activate         # Windows
+```
+
+### 3. Install Dependencies
+
 ```bash
 pip install -r requirements.txt
 ```
 
+---
+
 ## ⚙️ Konfigurasi
 
-Buat file `.env` di direktori yang sama:
+### 1. Buat file `.env`
 
-```env
-PRIVATE_KEY=0xYOUR_PRIVATE_KEY
-WALLET_ADDRESS=0xYOUR_WALLET_ADDRESS
+Di dalam direktori project, buat file `.env` dan isi seperti berikut:
+
+```dotenv
+PRIVATE_KEY=0x...           # Private key wallet kamu
+WALLET_ADDRESS=0x...        # Public address wallet kamu
 ```
 
-⚠️ **Jangan share file `.env` kamu ke publik!**
+> ⚠️ **Jangan pernah share file `.env` ke publik.**
 
-## 🧪 Cara Jalankan
+---
+
+## ▶️ Menjalankan Script
 
 ```bash
 python auto_mint_final.py
 ```
 
-## 💡 Catatan
+Script akan otomatis melakukan mint ke contract faucet sebanyak 1000x (bisa disesuaikan di kode).
 
-- RPC default menggunakan: `https://carrot.megaeth.com/rpc`
-- Kontrak mint cUSD: `0xe9b6e75c243b6100ffcb1c66e8f78f96feea727f`
-- Token ini adalah token ERC-20
+---
 
-## 📜 Lisensi
+## 📁 Struktur Folder
 
-MIT License
+```
+capmint/
+├── auto_mint_final.py      # Script utama
+├── .env                    # (kamu buat sendiri)
+├── .gitignore
+├── requirements.txt
+└── README.md
+```
+
+---
+
+## 📟 Lisensi
+
+MIT License. Gunakan dengan tanggung jawab.
+
+---
+
+## 💬 Kontak
+
+Created by [@deadlyraven13](https://github.com/deadlyraven13)
