@@ -30,7 +30,7 @@ PRIVATE_KEY=0xYOUR_PRIVATE_KEY
 WALLET_ADDRESS=0xYOUR_WALLET_ADDRESS
 ```
 
-> ⚠️ **Jangan share file `.env` kamu ke publik!**
+⚠️ **Jangan share file `.env` kamu ke publik!**
 
 ## 🧪 Cara Jalankan
 
