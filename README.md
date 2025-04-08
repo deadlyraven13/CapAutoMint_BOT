@@ -4,24 +4,15 @@ Script Python untuk otomatisasi proses mint token testnet cUSD dari faucet contr
 
 🔗 Source Faucet Resmi: [https://cap.app/testnet](https://cap.app/testnet)
 
-## 🚀 Fitur
+##  Fitur
 
 - Mint token cUSD dalam jumlah besar (loop otomatis).
 - Delay acak antar transaksi.
 - Status transaksi (berhasil/gagal) ditampilkan real-time.
-- GUI (opsional) bisa ditambahkan untuk tampilan saldo.
 
 ---
 
-## 🧰 Requirement
-
-- Python 3.10+
-- Git
-- Virtualenv (opsional tapi direkomendasikan)
-
----
-
-## ⚖️ Instalasi
+##  Instalasi
 
 ### 1. Clone Repository
 
@@ -33,9 +24,8 @@ cd CapAutoMint_BOT
 ### 2. Buat Virtual Environment (opsional tapi disarankan)
 
 ```bash
-python -m venv venv
-source venv/bin/activate      # Linux/macOS
-venv\Scripts\activate         # Windows
+python3 -m venv venv
+source venv/bin/activate
 ```
 
 ### 3. Install Dependencies
@@ -44,24 +34,17 @@ venv\Scripts\activate         # Windows
 pip install -r requirements.txt
 ```
 
----
+### 4. Buat file `.env`
 
-## ⚙️ Konfigurasi
-
-### 1. Buat file `.env`
-
-Di dalam direktori project, buat file `.env` dan isi seperti berikut:
+Di dalam direktori project, buat file `nano .env` dan isi seperti berikut:
 
 ```dotenv
 PRIVATE_KEY=0x...           # Private key wallet kamu
 WALLET_ADDRESS=0x...        # Public address wallet kamu
 ```
+PRIVATE KEY MENGUNAKAN 0x
 
-## ⚠️ **Jangan pernah share file ************************`.env`************************ ke publik.**
-
----
-
-## ▶️ Menjalankan Script
+## 5. Menjalankan Script
 
 ```bash
 python bot.py
@@ -71,12 +54,12 @@ Script akan otomatis melakukan mint ke contract faucet sebanyak 1000x (bisa dise
 
 ---
 
-## 📁 Struktur Folder
+##  Struktur Folder
 
 ```
-capmint/
-├── auto_mint_final.py      # Script utama
-├── .env                    # (kamu buat sendiri)
+CapAutoMint_BOT/
+├── bot.py      
+├── .env                    
 ├── .gitignore
 ├── requirements.txt
 └── README.md
