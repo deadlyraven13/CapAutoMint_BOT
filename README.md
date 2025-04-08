@@ -64,7 +64,7 @@ WALLET_ADDRESS=0x...        # Public address wallet kamu
 ## ▶️ Menjalankan Script
 
 ```bash
-bot.py
+python bot.py
 ```
 
 Script akan otomatis melakukan mint ke contract faucet sebanyak 1000x (bisa disesuaikan di kode).
